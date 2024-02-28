@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose=require("mongoose");
 const schema=mongoose.Schema;
 const userComment=new schema({
     name:{
