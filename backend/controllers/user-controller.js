@@ -1,4 +1,5 @@
 import User from "../model/User";
+  // const User =require("./model/User");
   export const getAllUser=async(req,res,next) => {
    let users;
    try{

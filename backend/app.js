@@ -1,9 +1,13 @@
-var express =require("express") ;
-var mongoose=require("mongoose");
+import express from "express";
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
 var app =express();
-import router from "./routes/user-routes";
-var url= 'mongodb://localhost:27017/blog'
+import router from "./routes/user-routes.js";
+// import router from "./routes/user-routes";
+const url= 'mongodb://localhost:27017/blog'
 app.use("/api/user",router) ; 
+console.log("this is main app");
 mongoose.connect(url,err=>{
   if(!err) {
       console.log("successful connection with the server");  
